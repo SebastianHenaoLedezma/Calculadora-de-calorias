@@ -1,0 +1,181 @@
+*{
+    margin-top: 0;
+    padding: 0;
+}
+/* Oculto los botones de subir y bajar numeros manualmente */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="text"], input[type="number"] {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #37474f;
+    border-radius: 0;
+    border: none;
+    border-bottom: 2px solid #37474f;
+    outline: none;
+    background: none;
+}
+
+input[type="text"]:focus, input[type="number"]:focus{
+    background: none;
+    box-shadow: none;
+    border-bottom:  2px solid #37474f;
+}
+
+body{
+    display: flex;
+    margin-top: 5rem;
+    background-image: url(img/cover.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.body-reset{
+    height: 100vh;
+}
+
+.container{
+    background: transparent;
+}
+
+.container-fluid{
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+#formulario-calorias{
+    transition: .5s;
+}
+
+h1{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+h2{
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.container-img{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-img img{
+    width: 40px;
+}
+
+.input-medidads{
+    width: 70%;
+}
+
+.label-text{
+    margin-top: auto;
+    border-bottom: 2px solid #37474f;
+}
+
+.div-contenedor{
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+.container-actividad{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+
+.boton-con-imagen {
+    display: inline-block;
+    padding: 30px 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.imagen-1 {
+    background: url('img/sentado.png') no-repeat center center;
+    /* z-index: 2; */
+    background-size: cover;
+}
+
+.imagen-2 {
+    background: url('img/persona.png') no-repeat center center;
+    background-size: cover;
+}
+
+.imagen-3 {
+    background: url('img/caminar.png') no-repeat center center;
+    background-size: cover;
+}
+.imagen-4 {
+    background: url('img/cargando.png') no-repeat center center;
+    background-size: cover;
+}
+
+.imagen-5 {
+    background: url('img/deportista.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* .boton-con-imagen:focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid yellow;
+    color: aquamarine;
+    background: linear-gradient(117deg, #03a9f4, #0288d1);
+    z-index: -1;
+} */
+
+.div-contenedor img{
+    max-width: 50%;
+    height: auto;
+}
+
+.btn-primary{
+    width: 100%;
+    transition: .5s;
+}
+
+#resultado{
+    text-align: center;
+    transition: .5s;
+    margin-top: 50px;
+}
+
+#resultado h3{
+    font-size: 50px;
+}
+
+#formulario-calorias, #resultado, .container-fluid{
+    transition: opacity 0.5s ease; 
+}
+
+.mostrar-animacion {
+    opacity: 1;
+    max-height: 1000px; 
+    transition: opacity 1s ease, max-height 1s ease;
+}
+
+.hidden {
+    opacity: 0; 
+    pointer-events: none; 
+}

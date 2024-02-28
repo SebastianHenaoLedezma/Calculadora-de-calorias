@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de calorias</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/e6640aaada.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-fluid">
+      <form id="formulario-calorias">
+        <h1>Calculadora de calorías</h1>
+        <div class="row mt-0 mt-md-32">
+          <div class="mb-3 p-2 col-12 col-md-6">
+            <label for="inputEdad" class="form-label">Nombre</label>
+            <input type="text" class="form-control sm" id="nombre" required>
+          </div>
+          <section class="row p-2 col-12 col-md-6">
+            <span>Sexo</span>
+            <div class="col-md-4 container-img">
+              <input class="form-check-input" value="F" type="radio" name="sexo" id="femenino">
+              <label class="form-check-label" for="femenino">
+                Femenino
+              </label>
+              <img src="img/mujer.png" alt="Imagen femenina" class="img-fluid">
+            </div>
+            <div class="col-md-4 container-img">
+              <input class="form-check-input" value="M" type="radio" name="sexo" id="masculino">
+              <label class="form-check-label" for="masculino">
+                Masculino
+              </label>
+              <img src="img/hombre.png" alt="Imagen femenina" class="img-fluid">
+            </div>
+          </section>
+          <div class="mb-3 mt-3 p-2 col-12 col-md-6">
+            <label for="actividad" class="form-label">Tipo de documento</label>
+            <select id="tipo-documento" class="form-select" required>
+              <option></option>
+              <option>TI - Tarjeta de identidad</option>
+              <option>CC - Cedula de ciudadania</option>
+              <option>CE - Cedula de extranjería</option>
+              <option>Pasaporte</option>
+            </select>
+          </div>
+          <div class="mb-3 mt-3 p-2 col-12 col-md-6">
+            <label for="inputEdad" class="form-label">Numero de documento</label>
+            <input type="number" class="form-control" id="documento" required>
+          </div>
+          <div class="row gap-3 justify-content-between mt-3 p-2 col-12">
+            <div class="row mb-3 mt-3 p-2 col-12 col-md-4">
+              <label for="inputEdad" class="form-label">Edad</label>
+              <input type="number" class="form-control col-md-6 input-medidads" id="edad" min="15" placeholder="23"
+                required>
+              <label class="col-md-2 label-text">Años</label>
+            </div>
+            <div class="row mb-3 mt-3 p-2 col-12 col-md-4">
+              <label for="inputPeso" class="form-label">Peso</label>
+              <input type="number" class="form-control col-md-6 input-medidads" id="peso" min="10"
+                placeholder="Peso en Kilogramos" required>
+              <label class="col-md-2 label-text">KG</label>
+            </div>
+            <div class="row mb-3 mt-3 p-2 col-12 col-md-4">
+              <label for="inputAltura" class="form-label">Altura</label>
+              <input type="number" class="form-control col-md-6 input-medidads" id="altura" min="10"
+                placeholder="Centimetros" required>
+              <label class="col-md-2 label-text">CM</label>
+            </div>
+          </div>
+          <div class="mb-3 mt-3 p-2 col-12">
+              <label for="actividad" class="form-label">Actividad física</label>
+              <select id="actividad" class="form-select" required>
+                <option></option>
+                <option value="1.2">Poco o ningún ejercicio</option>
+                <option value="1.375">Ejercicio ligero (1-3 días a la semana)</option>
+                <option value="1.55">Ejercicio moderado (3-5 días a la semana)</option>
+                <option value="1.725">Ejercicio fuerte (6-7 días a la semana)</option>
+                <option value="1.9">Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Este fue una actualizacion que trate de hacer -->
+          <!-- <div id="calculator-step-5">
+            <h2>¿Cómo de activo eres a diario?</h2>
+            <div class="mb-5 row p-2 col-18 mt-16">
+              <div class="div-contenedor">
+                <div>
+                  <div id="daily-calorie-light-activity" class="container-actividad" tabindex="6" data-value="1.2">
+                    <div class="button">No muy activo</div>
+                    <button class="boton-con-imagen imagen-1">
+                    </button>
+                    <div>Poco o ningún ejercicio</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-contenedor">
+                <div>
+                  <div id="daily-calorie-moderate-activity" class="container-actividad" tabindex="7" data-value="1.375">
+                    <div class="button">Medianamente activo</div>
+                    <button class="boton-con-imagen imagen-2">
+                    </button>
+                    <div>Ejercicio ligero (1-3 días a la semana)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-contenedor">
+                <div>
+                  <div id="daily-calorie-active-activity" class="container-actividad" tabindex="8" data-value="1.55">
+                    <div class="button">Activo</div>
+                    <button class="boton-con-imagen imagen-3">
+                    </button>
+                    <div>Ejercicio moderado (3-5 días a la semana)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-contenedor">
+                <div>
+                  <div id="daily-calorie-very-active-activity" class="container-actividad" tabindex="9" data-value="1.725">
+                    <div class="button">Muy activo</div>
+                    <button class="boton-con-imagen imagen-4">
+                    </button>
+                    <div>Ejercicio fuerte (6-7 días a la semana)</div>
+                  </div>
+                </div>
+              </div>
+              <div class="div-contenedor">
+                <div>
+                  <div id="daily-calorie-very-active-activity" class="container-actividad" tabindex="9" data-value="1.725">
+                    <div class="button">Deportista</div>
+                    <button class="boton-con-imagen imagen-5">
+                    </button>
+                    <div>Ejercicio muy fuerte (dos veces al día, entrenamientos muy duros)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <button type="submit" class="btn btn-primary">Calcular</button>
+      </form>
+      <div>
+        <div id="resultado">
+        </div>
+        <button type="button" class="btn btn-primary" id="retorno" style="display: none;">Calcular de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
